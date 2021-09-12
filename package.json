@@ -9,7 +9,8 @@
     "generate": "nuxt generate",
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
     "lint": "npm run lint:js",
-    "dev:server": "nest start --debug --watch"
+    "dev:backup": "nest start --debug --watch",
+    "dev:server": "nest build --webpack --webpackPath server-hmr.config.js --watch"
   },
   "dependencies": {
     "@nestjs/common": "^8.0.6",
@@ -40,6 +41,10 @@
     "eslint-plugin-nuxt": "^2.0.0",
     "eslint-plugin-vue": "^7.12.1",
     "prettier": "^2.3.2",
-    "supertest": "^6.1.6"
+    "run-script-webpack-plugin": "^0.0.11",
+    "supertest": "^6.1.6",
+    "typescript": "^4.4.3",
+    "webpack": "^4.46.0",
+    "webpack-node-externals": "^3.0.0"
   }
 }
